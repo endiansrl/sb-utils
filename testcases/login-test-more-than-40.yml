@@ -1,0 +1,33 @@
+---
+- description: list gateways
+  command: listGateways
+
+- description: create a gateway with < 40 characters username
+  command: createGateway
+  name: shortnamegw
+  password: TestPassword
+  domain: Endian_TEST2
+
+- description: try to login with it
+  command: loginTest
+  name: shortnamegw/Endian_TEST2
+  password: TestPassword
+
+- description: create a gateway with > 40 characters username
+  command: createGateway
+  name: morethan40characterslongusernameofgatewayhere
+  password: TestPassword
+  domain: Endian_TEST2
+
+- description: try to login with it
+  command: loginTest
+  name: morethan40characterslongusernameofgatewayhere/Endian_TEST2
+  password: TestPassword
+
+- description: delete the gateway
+  command: deleteGateway
+  name: shortnamegw/Endian_TEST2
+
+- description: delete the gateway 2
+  command: deleteGateway
+  name: morethan40characterslongusernameofgatewayhere/Endian_TEST2

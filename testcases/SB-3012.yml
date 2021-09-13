@@ -1,0 +1,22 @@
+---
+- description: create test gateway
+  command: createGateway
+  name: testGateway
+
+- description: create test endpoint
+  command: createEndpoint
+  gateway: testGateway
+  name: testEndpoint
+  physical_ip_address: 192.168.20.100
+
+- description: list endpoints
+  command: listEndpoints
+  retrieve_attributes: name
+
+- description: delete test gateway
+  command: deleteGateway
+  name: testGateway
+
+- description: list endpoints
+  command: listEndpoints
+  retrieve_attributes: name

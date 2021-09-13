@@ -1,0 +1,6 @@
+---
+  - description: Listing the users
+    command: listUsers
+  - description: Listing the gateways
+    command: listGateways
+    retrieve_attributes: "name,remark"

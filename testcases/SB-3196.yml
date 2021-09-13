@@ -1,0 +1,30 @@
+---
+- description: create test domain
+  command: createDomain
+  name: testDomain
+  organization: Test Organization
+
+- description: create a username larger than 64 characters
+  command: createUser
+  name: thisisaverybigusernameiaddedheresoitwillbemorethan64characterslongforsure@endian.com
+  password: Testpassword!
+  domain: testDomain
+
+- description: create a gateway larger than 64 characters
+  command: createGateway
+  name: thisisaverybigusernameiaddedheresoitwillbemorethan64characterslo1
+  domain: testDomain
+
+- description: create a gateway shorter than 64 characters
+  command: createGateway
+  name: shortGateway
+  domain: testDomain
+
+- description: rename the gateway to a larger name than 64 characters
+  command: setGateway
+  name: shortGateway/testDomain
+  new_name: thisisaverybigusernameiaddedheresoitwillbemorethan64characterslo1
+
+- description: delete test domain
+  command: deleteDomain
+  name: testDomain

@@ -1,0 +1,16 @@
+---
+  - description: List the gateways
+    command: listGateways
+
+  - description: Create a new gateway
+    command: createGateway
+    name: testgateway
+    remark: this is a test gateway
+    #domain: Endian
+
+  - description: Listing gateways again
+    command: listGateways
+
+  - description: Delete the gateway
+    command: deleteGateway
+    name: testgateway
